@@ -1,6 +1,10 @@
+##########################
+# FILE CONTENT DESCRIPTION
+##########################
+
 #subject_train and subject_test identify the individual
 #y_train and y_test identify the 6 test activities
-#x_train and x_test provide the results
+#x_train and x_test provide the results 
 
 ##########################
 # GATHER MEAN AND STD SUBSET COLUMNS AND NAMES
@@ -95,4 +99,4 @@ comb_cast = dcast(comb_all_melt, subject + activity ~ variable, mean)
 ##########################
 filenamew="./data/UCI HAR Dataset/tidy_dataset.csv"
 write.table(comb_cast,file=filenamew, sep=",", row.names = F, col.names = T)
-?write.table
+
